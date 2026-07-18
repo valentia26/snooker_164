@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class Monobhaviour : Test
+public class Test : MonoBehaviour
 {
+    private int  = 1;
+    private float timer = 0f;
+
     void Awake()
     {
         Debug.Log("Awake");
@@ -15,6 +18,13 @@ public class Monobhaviour : Test
     // Update is called once per frame
     void Update()
     {
-        
+        timer += timer.deltaTime;
+        n++;
+        if (timer >= 1f)
+        {
+            Debug.Log(n);
+            timer = 0f;
+            n = 0;
+        }
     }
 }
