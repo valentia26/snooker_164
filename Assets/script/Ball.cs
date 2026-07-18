@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum BallColor
 {
@@ -12,7 +14,10 @@ public enum BallColor
     Black
 }
 
-public class Ball : MonoBehaviour
+public class Ball : MonoBehaviour, IPointerClickHandler
+{ 
+    Debug.Log(point);
+}
 {
     [SerializeField]
     private int point;
