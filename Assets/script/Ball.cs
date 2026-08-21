@@ -92,7 +92,7 @@ public class Ball : MonoBehaviour, IPointerClickHandler
                 break;
 
             case BallColor.Black:
-                point = 0;
+                point = 7;
                 rd.material.color = Color.black;
                 break;
         }

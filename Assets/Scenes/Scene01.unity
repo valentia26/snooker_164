@@ -128,7 +128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154874149}
-  - component: {fileID: 154874150}
   m_Layer: 0
   m_Name: PosWhite
   m_TagString: Untagged
@@ -151,21 +150,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 185710538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &154874150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154874148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a82920d10154374b85d5f2ede1e0663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
-  playerScore: 0
-  ballPositions: []
-  ballPrefab: {fileID: 0}
 --- !u!1 &185710537
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a044fb15a9172fc409e3daf2e4d5594e, type: 2}
+  - {fileID: 2100000, guid: 966e0477bb79abc4c993d441ddeff9a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -661,7 +645,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a044fb15a9172fc409e3daf2e4d5594e, type: 2}
+  - {fileID: 2100000, guid: 966e0477bb79abc4c993d441ddeff9a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -826,11 +810,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
   playerScore: 0
   ballPositions:
-  - {fileID: 1133264006}
   - {fileID: 154874148}
   - {fileID: 1733710435}
   - {fileID: 1159478858}
   - {fileID: 1756198313}
+  - {fileID: 1133264006}
   - {fileID: 1160078529}
   - {fileID: 1615440572}
   - {fileID: 952286448}
@@ -844,7 +828,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 952286449}
-  - component: {fileID: 952286450}
   m_Layer: 0
   m_Name: PosBlack
   m_TagString: Untagged
@@ -867,21 +850,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 185710538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &952286450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952286448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a82920d10154374b85d5f2ede1e0663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
-  playerScore: 0
-  ballPositions: []
-  ballPrefab: {fileID: 0}
 --- !u!1 &1133264006
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +859,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133264007}
-  - component: {fileID: 1133264008}
   m_Layer: 0
   m_Name: PosBlue
   m_TagString: Untagged
@@ -914,21 +881,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 185710538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1133264008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133264006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a82920d10154374b85d5f2ede1e0663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
-  playerScore: 0
-  ballPositions: []
-  ballPrefab: {fileID: 0}
 --- !u!1 &1159478858
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +890,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1159478859}
-  - component: {fileID: 1159478860}
   m_Layer: 0
   m_Name: PosYellow
   m_TagString: Untagged
@@ -961,21 +912,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 185710538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1159478860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159478858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a82920d10154374b85d5f2ede1e0663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
-  playerScore: 0
-  ballPositions: []
-  ballPrefab: {fileID: 0}
 --- !u!1 &1160078529
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +921,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1160078530}
-  - component: {fileID: 1160078531}
   m_Layer: 0
   m_Name: PosBrown
   m_TagString: Untagged
@@ -1008,21 +943,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 185710538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1160078531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160078529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a82920d10154374b85d5f2ede1e0663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
-  playerScore: 0
-  ballPositions: []
-  ballPrefab: {fileID: 0}
 --- !u!1001 &1272765988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1032,9 +952,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 574bde707a02e314ebdc19d5ebf7fbfa, type: 2}
+    - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 14f7774edd01e7e40bd839744aa8f9da, type: 2}
+    - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 42287bd3833ccd14ba98b91fdc3f052b, type: 2}
+    - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f001292b63fa4bb4d96638ecc14992f2, type: 2}
+    - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a044fb15a9172fc409e3daf2e4d5594e, type: 2}
+    - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
+      propertyPath: 'm_Materials.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 251fc398691525c4fb263797447dc127, type: 2}
+    - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
+      propertyPath: 'm_Materials.Array.data[6]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 94573ef3c7dc40a4dab916bb9a804ccf, type: 2}
+    - target: {fileID: 1234521697443961060, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
+      propertyPath: 'm_Materials.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2100000, guid: be335ea5d20cc31499f2bedc3554966a, type: 2}
     - target: {fileID: 5809475002424901630, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
@@ -1085,28 +1037,40 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8357737917331792797, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1272765990}
+      addedObject: {fileID: 1272765995}
   m_SourcePrefab: {fileID: 100100000, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
 --- !u!1 &1272765989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8357737917331792797, guid: aaff497e2ae89ae46af169cae97d3429, type: 3}
   m_PrefabInstance: {fileID: 1272765988}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1272765990
-MonoBehaviour:
+--- !u!54 &1272765995
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272765989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78be9cfd33c11874da387086016f91d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ball
-  point: 0
-  color: 0
-  rb: {fileID: 0}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1401060222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,7 +1151,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a044fb15a9172fc409e3daf2e4d5594e, type: 2}
+  - {fileID: 2100000, guid: 966e0477bb79abc4c993d441ddeff9a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1299,7 +1263,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a044fb15a9172fc409e3daf2e4d5594e, type: 2}
+  - {fileID: 2100000, guid: 966e0477bb79abc4c993d441ddeff9a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1411,7 +1375,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a044fb15a9172fc409e3daf2e4d5594e, type: 2}
+  - {fileID: 2100000, guid: 966e0477bb79abc4c993d441ddeff9a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1523,7 +1487,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a044fb15a9172fc409e3daf2e4d5594e, type: 2}
+  - {fileID: 2100000, guid: 966e0477bb79abc4c993d441ddeff9a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1564,7 +1528,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1615440573}
-  - component: {fileID: 1615440574}
   m_Layer: 0
   m_Name: PosPink
   m_TagString: Untagged
@@ -1587,21 +1550,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 185710538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1615440574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615440572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a82920d10154374b85d5f2ede1e0663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
-  playerScore: 0
-  ballPositions: []
-  ballPrefab: {fileID: 0}
 --- !u!1 &1733710435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,7 +1559,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1733710436}
-  - component: {fileID: 1733710437}
   m_Layer: 0
   m_Name: PosRed
   m_TagString: Untagged
@@ -1634,21 +1581,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 185710538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1733710437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733710435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a82920d10154374b85d5f2ede1e0663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
-  playerScore: 0
-  ballPositions: []
-  ballPrefab: {fileID: 0}
 --- !u!1 &1756198313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1590,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1756198314}
-  - component: {fileID: 1756198315}
   m_Layer: 0
   m_Name: PosGreen
   m_TagString: Untagged
@@ -1681,21 +1612,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 185710538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1756198315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756198313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a82920d10154374b85d5f2ede1e0663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
-  playerScore: 0
-  ballPositions: []
-  ballPrefab: {fileID: 0}
 --- !u!1 &1864627029
 GameObject:
   m_ObjectHideFlags: 0

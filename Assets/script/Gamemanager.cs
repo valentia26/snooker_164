@@ -23,6 +23,7 @@ public class Gamemanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
         SetBall(BallColor.Red, 1);
         SetBall(BallColor.Yellow, 2);
         SetBall(BallColor.Green, 3);
