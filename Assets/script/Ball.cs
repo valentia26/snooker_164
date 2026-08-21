@@ -33,7 +33,7 @@ public class Ball : MonoBehaviour, IPointerClickHandler
     private BallColor color;
 
     [SerializeField]
-    private MeshRenderer rb;
+    private MeshRenderer rd;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
@@ -47,48 +47,53 @@ public class Ball : MonoBehaviour, IPointerClickHandler
 
     }
 
+    void Awake()
+    {
+        rd = GetComponent<MeshRenderer> ();
+    }
+
     public void SetColorAndPoint(BallColor col)
     {
         switch(col)
         {
             case BallColor.White:
                 point = 0;
-                rb.material.color = Color.white;
+                rd.material.color = Color.white;
                 break;
 
             case BallColor.Red:
                 point = 1;
-                rb.material.color = Color.red;
+                rd.material.color = Color.red;
                 break;
 
             case BallColor.Yellow:
                 point = 2;
-                rb.material.color = Color.yellow;
+                rd.material.color = Color.yellow;
                 break;
 
             case BallColor.Green:
                 point = 3;
-                rb.material.color = Color.green;
+                rd.material.color = Color.green;
                 break;
 
             case BallColor.Brown:
                 point = 4;
-                rb.material.color = Color.brown;
+                rd.material.color = Color.brown;
                 break;
 
             case BallColor.Blue:
                 point = 5;
-                rb.material.color = Color.blue;
+                rd.material.color = Color.blue;
                 break;
 
             case BallColor.Pink:
                 point = 6;
-                rb.material.color = Color.pink;
+                rd.material.color = Color.pink;
                 break;
 
             case BallColor.Black:
                 point = 0;
-                rb.material.color = Color.black;
+                rd.material.color = Color.black;
                 break;
         }
     }
