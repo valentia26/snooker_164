@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Gamemanager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Gamemanager : MonoBehaviour
     private GameObject[] ballPositions;
 
     [SerializeField]
-    private GameObject ballprefab;
+    private GameObject ballPrefab;
 
     public static Gamemanager instance;
 
@@ -22,7 +23,7 @@ public class Gamemanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SetBall(BallColor red, 1);
+        SetBall(BallColor.Red, 1);
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class Gamemanager : MonoBehaviour
 
     private void SetBall(BallColor col, int i)
     {
-       GameObject obj = Instantiate(ballprefab,
+       GameObject obj = Instantiate(ballPrefab,
             ballPositions[i].transform.position,
             Quaternion.identity);
 

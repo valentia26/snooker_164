@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    private int  = 1;
+    private int n = 1;
     private float timer = 0f;
 
     void Awake()
@@ -18,7 +18,7 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += timer.deltaTime;
+        timer += Time.deltaTime;
         n++;
         if (timer >= 1f)
         {
