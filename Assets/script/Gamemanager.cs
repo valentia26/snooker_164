@@ -52,6 +52,8 @@ public class Gamemanager : MonoBehaviour
             xInput = 0.1f;
         else
             xInput = 0f;
+
+        RotateBall();
     }
 
     private void SetBall(BallColor col, int i)
