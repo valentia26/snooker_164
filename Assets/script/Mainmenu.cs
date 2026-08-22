@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mainmenu : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Mainmenu : MonoBehaviour
     // Update is called once per frame
     public void StartGame()
     {
-        Scenemanager.LoadScene("Scene01");
+        SceneManager.LoadScene("Scene01");
     }
 
     public void ExitGame()
