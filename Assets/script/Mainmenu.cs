@@ -11,7 +11,7 @@ public class Mainmenu : MonoBehaviour
     {
         AudioManager.instance.PlayBGM(0);
 
-        volumeSlider.value = AudioManager.instance
+        volumeSlider.value = AudioManager.instance;
     }
 
     // Update is called once per frame
