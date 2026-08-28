@@ -10,14 +10,17 @@ public class Hole : MonoBehaviour
         {
             if (b.Point == 0)
             {
-                Gamemanager.instance.ShowStringText($"White Ball drop!!!\nYoulose!!!");
-                Time.timeScale = 0f;
+                UiManager.instance.ShowGameOverUI($"White Ball Drop!!!\nYou Lose");
             }
             else
             {
                 Gamemanager.instance.ShowScoreText(b.Point);
             }
+
             Destroy(b.gameObject);
+
+            if (AudioManager.instance != null)
+                AudioManager.instance.PlaySFX(0);
         }
     }
 }

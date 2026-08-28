@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class Mainmenu : MonoBehaviour
 {
+
+    [SerializeField]
+    private GameObject adjustPanel;
+
     [SerializeField]
     private Slider volumeSlider;
 
@@ -12,20 +16,36 @@ public class Mainmenu : MonoBehaviour
     {
         AudioManager.instance.PlayBGM(0);
 
-        // ตั้งค่า slider ให้ตรงกับ volume ที่เคยบันทึกไว้
         volumeSlider.value = AudioManager.instance.LoadCurrentMasterVolume();
 
-        // เมื่อลาก slider ให้ปรับ volume ผ่าน AudioMixer
+      
         volumeSlider.onValueChanged.AddListener(AudioManager.instance.AdjustMasterVolume);
     }
 
-    public void StartGame()
+    public void StartNewGame()
     {
-        SceneManager.LoadScene("Scene01");
+        Setting.fromSave = false;
+        SceneManager.LoadScene("Load");
+    }
+
+    public void LoadSaveGame()
+    {
+        Setting.fromSave = true;
+        SceneManager.LoadScene("Load");
     }
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void ShowHideAdjustPanel(bool flag)
+    {
+        adjustPanel.SetActive(flag);
+    }
+
+    public void SetVolume(float volume)
+    {
+        AudioManager.instance.AdjustMasterVolume(volume);
     }
 }

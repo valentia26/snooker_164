@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Gamemanager : MonoBehaviour
@@ -29,6 +30,12 @@ public class Gamemanager : MonoBehaviour
     [SerializeField]
     private GameObject cam;
 
+    [Header("Lose Condition")]
+    [SerializeField]
+    private GameObject loseGameObject; // panel ที่รวม text "You Lose" + ปุ่ม Exit/Restart
+
+    private bool isGameOver = false;
+
     public static Gamemanager instance;
 
     void Awake()
@@ -39,6 +46,12 @@ public class Gamemanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        isGameOver = false;
+        Time.timeScale = 1f;
+
+        if (loseGameObject != null)
+            loseGameObject.SetActive(false);
+
         SetBall(BallColor.Red, 1);
         SetBall(BallColor.Yellow, 2);
         SetBall(BallColor.Green, 3);
@@ -46,11 +59,16 @@ public class Gamemanager : MonoBehaviour
         SetBall(BallColor.Brown, 5);
         SetBall(BallColor.Pink, 6);
         SetBall(BallColor.Black, 7);
+
+        if (Setting.fromSave)
+            LoadGame();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isGameOver) return; // เกมจบแล้วไม่ต้องรับ input หรือเช็คอะไรอีก
+
         RotateBall();
 
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
@@ -64,6 +82,8 @@ public class Gamemanager : MonoBehaviour
 
         if (Keyboard.current.backspaceKey.wasPressedThisFrame)
             StopBall();
+        if (Keyboard.current.leftShiftKey.isPressed && Keyboard.current.sKey.wasPressedThisFrame)
+            SaveGame();
     }
 
     private void SetBall(BallColor col, int i)
@@ -138,6 +158,7 @@ public class Gamemanager : MonoBehaviour
         cam.transform.eulerAngles = new Vector3(30f, 0f, 0f);
     }
 
+
     public void ShowScoreText(int n)
     {
         playerScore += n;
@@ -145,9 +166,47 @@ public class Gamemanager : MonoBehaviour
             notiText.text = $"Ball Point:{n}\nTotal Score:{playerScore}";
     }
 
-    public void ShowStringText(string s)
+    
+    public void RestartGame()
     {
-        if (notiText != null)
-            notiText.text = s;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    
+    public void ExitGame()
+    {
+        Time.timeScale = 1f;
+        Application.Quit();
+    }
+
+    public void SaveGame()
+    {
+        StopBall();
+
+        if (cueBall != null)
+        {
+            PlayerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.x);
+            PlayerPrefs.SetFloat("cueBallPosY", cueBall.transform.position.y);
+            PlayerPrefs.SetFloat("cueBallPosZ", cueBall.transform.position.z);
+
+            Debug.Log("Saved White");
+        }
+    }
+
+    public void LoadGame()
+    {
+        StopBall();
+
+        if (cueBall != null)
+        {
+            float x = PlayerPrefs.GetFloat("cueBallPosX", cueBall.transform.position.x);
+            float y = PlayerPrefs.GetFloat("cueBallPosY", cueBall.transform.position.y);
+            float z = PlayerPrefs.GetFloat("cueBallPosZ", cueBall.transform.position.z);
+
+            cueBall.transform.position = new Vector3(x, y, z);
+
+            Debug.Log("Loaded White");
+        }
     }
 }

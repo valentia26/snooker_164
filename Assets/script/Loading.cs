@@ -9,6 +9,7 @@ public class Loading : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
+    [SerializeField]
     private float waitSeconds = 1f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -12,9 +12,14 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] SFX { get { return sfx; } }
 
     [SerializeField]
-    private AudioMixer audioMixer;
+    private AudioMixer mixer;
 
     public static AudioManager instance;
+
+    void Awake() 
+    { 
+        instance = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,15 +56,15 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void AdjustMasterVolume(float volume)
+    {
+        mixer.SetFloat("master", volume);
+        PlayerPrefs.SetFloat("master", volume);
+        PlayerPrefs.Save();
+    }
+
     public float LoadCurrentMasterVolume()
     {
         return PlayerPrefs.GetFloat("master", 0f);
-    }
-    public void AdjustMasterVolume(float volume)
-    {
-        audioMixer.SetFloat("master", volume);
-        PlayerPrefs.SetFloat("master", volume);
-
-
     }
 }
