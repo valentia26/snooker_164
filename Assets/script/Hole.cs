@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Ball b = other.GetComponent<Ball>();
 
-        if (b == null)
+        if (b != null)
         {
             if (b.Point == 0)
             {

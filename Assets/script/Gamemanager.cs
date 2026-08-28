@@ -39,7 +39,6 @@ public class Gamemanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         SetBall(BallColor.Red, 1);
         SetBall(BallColor.Yellow, 2);
         SetBall(BallColor.Green, 3);
@@ -79,13 +78,26 @@ public class Gamemanager : MonoBehaviour
 
     private void ShootBall()
     {
+        if (cueBall == null)
+        {
+            Debug.LogWarning("cueBall is missing/destroyed. Cannot shoot.");
+            return;
+        }
+
         Rigidbody rd = cueBall.GetComponent<Rigidbody>();
+        if (rd == null) return;
+
         rd.AddRelativeForce(Vector3.forward * 50, ForceMode.Impulse);
 
-        ballLine.SetActive(false);
-        cam.transform.parent = null;
-        cam.transform.position = new Vector3(0f, 30f, -42f);
-        cam.transform.eulerAngles = new Vector3(45f, 0f, 0f);
+        if (ballLine != null)
+            ballLine.SetActive(false);
+
+        if (cam != null)
+        {
+            cam.transform.parent = null;
+            cam.transform.position = new Vector3(0f, 30f, -42f);
+            cam.transform.eulerAngles = new Vector3(45f, 0f, 0f);
+        }
     }
 
     private void RotateBall()
@@ -96,17 +108,31 @@ public class Gamemanager : MonoBehaviour
 
     private void StopBall()
     {
+        if (cueBall == null)
+        {
+            Debug.LogWarning("cueBall is missing/destroyed. Cannot stop.");
+            return;
+        }
+
         Rigidbody rb = cueBall.GetComponent<Rigidbody>();
-        rb.linearVelocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
         cueBall.transform.eulerAngles = Vector3.zero;
 
-        ballLine.SetActive(true);
+        if (ballLine != null)
+            ballLine.SetActive(true);
+
         CameraBehindCueBall();
     }
 
     private void CameraBehindCueBall()
     {
+        if (cueBall == null || cam == null) return;
+
         cam.transform.parent = cueBall.transform;
         cam.transform.position = cueBall.transform.position + new Vector3(0f, 7f, -15f);
         cam.transform.eulerAngles = new Vector3(30f, 0f, 0f);
@@ -115,10 +141,13 @@ public class Gamemanager : MonoBehaviour
     public void ShowScoreText(int n)
     {
         playerScore += n;
-        notiText.text = $"Ball Point:{n}\nTotal Score:{playerScore}";
+        if (notiText != null)
+            notiText.text = $"Ball Point:{n}\nTotal Score:{playerScore}";
     }
+
     public void ShowStringText(string s)
     {
-        notiText.text = s;
+        if (notiText != null)
+            notiText.text = s;
     }
 }

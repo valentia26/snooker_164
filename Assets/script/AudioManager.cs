@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void LoadCurrentMasterVolume()
+    public float LoadCurrentMasterVolume()
     {
         return PlayerPrefs.GetFloat("master", 0f);
     }
